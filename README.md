@@ -143,16 +143,18 @@ The amount to pay KIM is: 430.00 USD
 You may also run tests regarding synthetic conditions this way:
 
 ```
-./ioet_python_challenge.py 
-usage: ioet_python_challenge.py [-h] filename
-ioet_python_challenge.py: error: the following arguments are required: filename
+./ioet_python_challenge_test.py
+```
 
-./ioet_python_challenge.py ioet_challenge_test_input_data.txt 
-The amount to pay RENE is: 215.00 USD
-The amount to pay ASTRID is: 85.00 USD
-The amount to pay MIKE is: 818.42 USD
-The amount to pay LAURA is: 377.25 USD
-The amount to pay KIM is: 430.00 USD
+Which in turn will perform a series of test against the crucial functions of the script:
+
+
+```
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 0.002s
+
+OK
 ```
 
 ##TODO
