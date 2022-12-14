@@ -64,7 +64,13 @@ Due to Customer's Time Definition Format (which resembles a "discrete" time spec
 
 The alternative chosen involved converting hours to minutes and summing them to the remaining minutes. The resulting sum should range in the interval (0:1440].
 
-Day values are not involved in this calculation because, as Customer's specification has this kind of "discrete" format where no datetime is used, there's no relation to dates (which indeed implies an ordinal relationship day after day, conforming months and years)
+Day values are not involved in this calculation because, as Customer's specification has this kind of "discrete" format where no datetime is used, there's no relation to dates (which indeed implies an ordinal relationship day after day, conforming months and years).
+
+The following matrix summarizes the core idea behind time handling in the script, from Monday tom Monday, salary has three time shifts available for a wage rate, and if it's a weekend day, then USD5.- is added to the wage. Time intervals are converted to intervals (0:540] [541:1080][1081:1440].
+A dictionary will hold this structure, and cell queries will be perform to obtain corresponding data:
+
+![imagen](https://user-images.githubusercontent.com/69780507/207490516-19bead59-5445-4898-8fd2-098e8b7756f3.png)
+
 
 Even tough a _planar_ time system was envisioned, still, booked records would present situations where an employee started his duties on an time interval and ended them in other one, which imply different wages for each time interval.
 
